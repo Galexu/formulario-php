@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Aldo';
+    src: url('Aldo.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Aldo';
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+body {
+    background: repeating-linear-gradient(to bottom,
+            transparent,
+            transparent 10%,
+            #28272c 10%, #28272c 20%,
+            #ff1f67 20%, #ff1f67 30%,
+            #28272c 30%, #28272c 40%,
+            #ff1f67 40%, #ff1f67 50%,
+            #28272c 50%, #28272c 60%,
+            #ff1f67 60%, #ff1f67 70%,
+            #28272c 70%, #28272c 80%,
+            #ff1f67 80%, #ff1f67 90%,
+            transparent 90%, transparent 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    max-width: 900px;
+    background-color: white;
+    margin: 50px 50px;
+    border: 2px solid #ff1f67;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 60px;
+
+    label {
+        margin-top: 30px;
+        color: #ff1f67;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    select {
+        width: 80%;
+        height: 40px;
+        border: 1px solid black;
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+
+    .fecha_hora {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        .fecha,
+        .hora {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    textarea {
+        width: 80%;
+        height: 75px;
+        border: 1px solid black;
+        resize: none;
+        form-sizing: content;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="date"],
+    input[type="time"] {
+        width: 80%;
+        height: 40px;
+        border: 1px solid black;
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+
+    .checkbox {
+        width: 80%;
+
+        .checkbox_hijo {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            label {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width: 80%;
+                text-align: left;
+            }
+
+            input {
+                width: 20%;
+                height: 30px;
+            }
+
+            @media (max-width: 800px) {
+                flex-direction: column;
+
+                label {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    input[type="submit"] {
+        width: 35%;
+        height: 45px;
+        padding: 0 10px;
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        transition: 0.4s;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ff1f67;
+        }
+
+        @media (max-width: 800px) {
+            width: 50%;
+        }
+
+    }
+}
